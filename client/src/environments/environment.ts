@@ -5,7 +5,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://www.yavirac.edu.ec/ignug/server/',
+  apiUrl: 'http://localhost/server/',
   //apiUrl: 'http://localhost/proyectos/sae/server/'
   firebase:{
     apiKey: "AIzaSyAEnGCT9CTj6af9436tBi0dnpDhW1a6IjQ",

@@ -6,8 +6,12 @@ import {Http, Headers, Response} from '@angular/http';
 import { AngularFireDatabase } from 'angularfire2/database';
 //importa la clace persona
 import { Persona  } from 'app/entidades/CRUD/Persona';
+//enviroment
+import { environment } from '/Users/Ivan/Documents/IGNUG2/sae/client/src/environments/environment';
+
 
 @Injectable()
+
 
 
 export class ChatObtenerChatSalaService {
@@ -16,13 +20,16 @@ export class ChatObtenerChatSalaService {
     private http: Http,
    private http2: HttpClient,
      public angularFireDatabase: AngularFireDatabase
+    
      ) {     }
 
+    
      // metodo para obtener las salas segun id de la persona logeada
      getPersona(id): Promise<any> {
 
       let data = {idPersona: id};
-      return this.http.post('http://yavirac.edu.ec/ignug/server/chat/consultar_salas', JSON.stringify(data))
+    //  return this.http.post('http//localhost/server/chat/consultar_salas', JSON.stringify(data))
+      return this.http.post(environment.apiUrl +'chat/consultar_salas', JSON.stringify(data))
       .toPromise().then(
         respuesta => respuesta.json()
       ).catch(

@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api: 'http://www.yavirac.edu.ec/ignug/server/'
+  api: 'http://localhost/server/'
 };

@@ -6,6 +6,8 @@ import {Http, Headers, Response} from '@angular/http';
 import { AngularFireDatabase } from 'angularfire2/database';
 //importa la clace persona
 import { Persona  } from 'app/entidades/CRUD/Persona';
+//enviroment
+import { environment } from '/Users/Ivan/Documents/IGNUG2/sae/client/src/environments/environment';
 
 
 @Injectable()
@@ -17,7 +19,7 @@ export class ChatConsultarSalasService {
       ) { }
       getSalas(id: number) {
         const data = { id: id };   
-        return this.http.post('http://www.yavirac.edu.ec/ignug/server/chat/consultar_salas', JSON.stringify(data)).toPromise().then(
+        return this.http.post(environment.apiUrl+'chat/consultar_salas', JSON.stringify(data)).toPromise().then(
           respuesta => {
             return respuesta.json();
           }

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api: 'http://www.yavirac.edu.ec/ignug/server/'
+  api: 'http://localhost/server/'
 };
 
 /*

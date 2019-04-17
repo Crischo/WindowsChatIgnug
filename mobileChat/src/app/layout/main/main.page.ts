@@ -267,7 +267,7 @@ refrescandoSala(): Boolean {
         fecha: "" + Date.now(),
 
         salaID: this.salaElegida,
-        foto: "" + this.srcFoto,
+        adjunto: "" + this.srcFoto,
         nomDoc: "" + this.fotoNombre,
         tipo: "" + this.fotoType
       });
@@ -277,6 +277,7 @@ refrescandoSala(): Boolean {
       this.fotoType = "image";
       this.fotoNombre = "";
     }
+    this.eliminarAdjunto();
   }
 
   isSalaSelected(): Boolean {

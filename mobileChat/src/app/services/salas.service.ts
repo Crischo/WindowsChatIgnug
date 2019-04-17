@@ -16,7 +16,7 @@ export class SalasService {
       ) { }
       getSalas(id: number) {
         const data = { id: id };   
-        return this.http.post('http://www.yavirac.edu.ec/ignug/server/chat/consultar_salas', JSON.stringify(data)).toPromise().then(
+        return this.http.post('http://localhost/server/chat/consultar_salas', JSON.stringify(data)).toPromise().then(
           respuesta => {
             return respuesta.json();
           }
